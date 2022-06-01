@@ -1,4 +1,4 @@
-package inter;
+package IO;
 
 public interface Scannie {
     String scanString() throws Exception;

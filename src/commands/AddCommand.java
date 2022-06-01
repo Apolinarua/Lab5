@@ -1,10 +1,10 @@
 package commands;
 
-import inter.Printor;
+import IO.Printor;
 import data.Movie;
 import data.MyPriorityQueue;
 
-public class AddCommand implements Command{
+public class AddCommand  implements Command{
     private MyPriorityQueue<Movie> collection;
     private final Printor printor;
     private Movie movie;

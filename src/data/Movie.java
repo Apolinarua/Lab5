@@ -13,6 +13,10 @@ public class Movie implements Comparable<Movie>{
     private MovieGenre genre; //Поле может быть null
     private MpaaRating mpaaRating; //Поле не может быть null
     private Person director; //Поле не может быть null
+    public Movie() {
+
+    }
+
 
     public long getId() {
         return id;

@@ -15,6 +15,7 @@ public class Coordinates {
         if (x == null) {
             throw new Exception("Поле x не может быть null");
         }
+        this.x=x;
     }
 
     public Float getX() {
@@ -24,13 +25,14 @@ public class Coordinates {
         if (y == null) {
             throw new Exception("Поле y не может быть null");
         }
+        this.y=y;
     }
     public Long getY() {
         return y;
     }
-    public Coordinates(Float x,Long y){
-        this.x=x;
-        this.y=y;
+    public Coordinates(Float x,Long y) throws Exception {
+        setX(x);
+        setY(y);
     }
 
     @Override

@@ -1,6 +1,6 @@
 package commands;
 
-import inter.Printor;
+import IO.Printor;
 import data.Movie;
 import data.MyPriorityQueue;
 

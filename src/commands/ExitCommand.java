@@ -1,6 +1,6 @@
 package commands;
 
-import inter.Printor;
+import IO.Printor;
 
 public class ExitCommand implements Command{
     private final Printor printor;
@@ -11,7 +11,7 @@ public class ExitCommand implements Command{
 
     @Override
     public void execute() throws Exception {
-        printor.println("Программа того этого ");
+        printor.println("Выполнение программы закончено ");
         System.exit(0);
     }
 }

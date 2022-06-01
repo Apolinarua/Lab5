@@ -1,17 +1,15 @@
 package data.make;
 
 import data.Coordinates;
-import inter.Printor;
-import inter.Scannie;
+import IO.Printor;
+import IO.Scannie;
 
-import java.io.IOException;
-
-public class makeCoordinates {
+public class MakeCoordinates {
     private final Coordinates coordinates;
     private final boolean isConsole;
 
-    public makeCoordinates(Coordinates coordinates, boolean isConsole) {
-        this.coordinates = coordinates;
+    public MakeCoordinates(boolean isConsole) {
+        this.coordinates = new Coordinates();
         this.isConsole = isConsole;
     }
     public Coordinates make(Scannie scannie, Printor printor) throws Exception {
@@ -25,14 +23,14 @@ public class makeCoordinates {
             printor.println("Введите координату y");
             String y = scannie.scanString();
             try {
-                coordinates.setY(Long.valueOf(y));
+                coordinates.setY(Long.parseLong(y));
             } catch (Exception e) {
                 printor.println("Что-то не так: " + e.getMessage());
                 makeY(scannie, printor);
             }
         } else {
             String y = scannie.scanString();
-            coordinates.setY(Long.valueOf(y));
+            coordinates.setY(Long.parseLong(y));
         }
         }
 
@@ -42,14 +40,14 @@ public class makeCoordinates {
             printor.println("Введите координату x");
             String x = scannie.scanString();
             try {
-                coordinates.setX(Float.valueOf(x));
+                coordinates.setX(Float.parseFloat(x));
             } catch (Exception e) {
                 printor.println("Что-то не так: " + e.getMessage());
                 makeY(scannie, printor);
             }
         } else {
             String x = scannie.scanString();
-            coordinates.setX(Float.valueOf(x));
+            coordinates.setX(Float.parseFloat(x));
         }
 
     }

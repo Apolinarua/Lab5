@@ -1,4 +1,4 @@
-package inter;
+package IO;
 
 import java.io.IOException;
 

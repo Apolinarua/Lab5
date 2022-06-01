@@ -1,19 +1,34 @@
 package commands;
 
 import data.Movie;
-import inter.Printor;
+import data.MovieGenre;
+import data.MyPriorityQueue;
+import IO.Printor;
 
-public class FilterByGenreCommand implements Command{
+import java.util.Locale;
+
+public class FilterByGenreCommand implements Command {
     private final Printor printor;
-    private final Movie movie;
+    private final MyPriorityQueue<Movie> collection;
+    private final String genre;
 
-    public FilterByGenreCommand(Printor printor, Movie movie) {
+    public FilterByGenreCommand(MyPriorityQueue<Movie> collection, Printor printor, String genre) {
         this.printor = printor;
-        this.movie = movie;
+        this.collection = collection;
+        this.genre = genre;
     }
 
     @Override
     public void execute() throws Exception {
-
+        printor.println("Элементы у которых жанр " + genre);
+        int num = 0;
+        for (Movie movie : collection) {
+            if (movie.getGenre().equals( MovieGenre.valueOf(genre.trim().toUpperCase(Locale.ROOT)))) {
+                printor.println(movie.toString());
+                num++;
+            }
+        }
+        printor.println("Всего: "+num);
     }
 }
+
