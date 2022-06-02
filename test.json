@@ -1,0 +1,42 @@
+{
+  "movies" : [ {
+    "id" : 5196402528103778917,
+    "name" : "asd",
+    "coordinates" : {
+      "x" : 2.0,
+      "y" : 2
+    },
+    "creationDate" : 1654154989.613401000,
+    "oscarsCount" : 2,
+    "length" : 2,
+    "genre" : "ACTION",
+    "mpaaRating" : "R",
+    "director" : {
+      "name" : "adf",
+      "birthday" : 1196673330.000000000,
+      "height" : 2.0,
+      "passportID" : "3",
+      "eyeColor" : "BLACK"
+    }
+  }, {
+    "id" : 4820125289991269298,
+    "name" : "a",
+    "coordinates" : {
+      "x" : 2.0,
+      "y" : 3
+    },
+    "creationDate" : 1654155028.078497700,
+    "oscarsCount" : 43,
+    "length" : 2,
+    "genre" : "ACTION",
+    "mpaaRating" : "R",
+    "director" : {
+      "name" : "фыаф",
+      "birthday" : 1196673330.000000000,
+      "height" : 2.0,
+      "passportID" : "3",
+      "eyeColor" : "YELLOW"
+    }
+  } ],
+  "creationTime" : 1654154986.349085000
+}
