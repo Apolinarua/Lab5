@@ -27,7 +27,7 @@ public class UpdateIdCommand implements Command {
             collection.add(movie);
             printor.println("The element with id " + id + "was updated");
         } catch (NullPointerException e) {
-            throw new Exception("No element with such id");
+            printor.println("нет такого");
         }
 
     }

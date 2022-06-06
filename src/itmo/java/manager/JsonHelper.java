@@ -71,10 +71,10 @@ public class JsonHelper {
         objectMapper.registerModule(new JavaTimeModule()); //чтобы время было
         JsonHelper jsonHelper = objectMapper.readValue(new File(filename), JsonHelper.class);
 
-        return jsonHelper.getHashSet();
+        return jsonHelper.getMyPriorityQueue();
     }
 
-    private MyPriorityQueue<Movie> getHashSet() {
+    private MyPriorityQueue<Movie> getMyPriorityQueue() {
         MyPriorityQueue<Movie> myPriorityQueue = new MyPriorityQueue<>();
         myPriorityQueue.addAll(Arrays.asList(movies));
         myPriorityQueue.setCreationdate(this.creationTime);

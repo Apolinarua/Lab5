@@ -8,6 +8,7 @@ import itmo.java.IO.Scannie;
 import itmo.java.data.Movie;
 import itmo.java.data.MyPriorityQueue;
 import itmo.java.manager.CommandManager;
+import itmo.java.manager.JsonHelper;
 
 import java.io.File;
 
@@ -26,7 +27,7 @@ public class Main {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
         try {
-            myPriorityQueue = objectMapper.readValue(new File(filename), MyPriorityQueue.class);
+            myPriorityQueue = JsonHelper.toMyPriorityQueue(filename);
         } catch (Exception e){
             System.out.println(e.getMessage());
         }
