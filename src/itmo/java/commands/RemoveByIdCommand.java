@@ -18,11 +18,15 @@ public class RemoveByIdCommand implements Command {
 
     @Override
     public void execute() throws Exception {
-        try {
-            collection.removeIf(movie -> movie.getId() == id);
-            printor.println("Элемент удален из коллекции");
-        } catch (NullPointerException e) {
-            throw new Exception("Элемента с таким id нет");
+        if (collection.isEmpty()) {
+            printor.println("Коллекция пустая, добавьте элемент");
+        } else {
+            try {
+                collection.removeIf(movie -> movie.getId() == id);
+                printor.println("Элемент удален из коллекции");
+            } catch (NullPointerException e) {
+                throw new Exception("Элемента с таким id нет");
+            }
         }
     }
 }

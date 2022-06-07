@@ -57,6 +57,7 @@ public class MakePerson {
                 director.setName(name);
             } catch (Exception e) {
                 printor.println("Что-то не так: " + e.getMessage());
+                printor.println("Имя должно быть словом, например John Smith");
                 makeName(scannie, printor);
             }
         } else {
@@ -74,6 +75,7 @@ public class MakePerson {
                 director.setHeight(height);
             } catch (Exception e) {
                 printor.println("Что-то не так: " + e.getMessage());
+                printor.println("Рост должен быть числом в промежутке (0;1.7e+308]");
                 makeHeight(scannie, printor);
             }
         } else {
@@ -106,6 +108,7 @@ public class MakePerson {
                 director.setEyeColor(Color.valueOf(eyecolour.trim().toUpperCase(Locale.ROOT)));
             } catch (Exception e) {
                 printor.println("Что-то не так: " + e.getMessage());
+                printor.println("Цвет глаз должен соответствовать одному из значений списка: " + Arrays.toString(Color.values()));
                 makeEyeColour(scannie, printor);
             }
         } else {

@@ -27,6 +27,7 @@ public class MakeCoordinates {
                 coordinates.setY(Long.parseLong(y));
             } catch (Exception e) {
                 printor.println("Что-то не так: " + e.getMessage());
+                printor.println("Координата y должна быть целым числом в промежутке  [-9223372036854775808;9223372036854775807]");
                 makeY(scannie, printor);
             }
         } else {
@@ -44,6 +45,7 @@ public class MakeCoordinates {
                 coordinates.setX(Float.parseFloat(x));
             } catch (Exception e) {
                 printor.println("Что-то не так: " + e.getMessage());
+                printor.println("Координата x должна быть числом в промежутке  [3.4e-38;3.4e+38]");
                 makeX(scannie, printor);
             }
         } else {

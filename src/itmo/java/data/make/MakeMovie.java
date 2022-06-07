@@ -2,6 +2,7 @@ package itmo.java.data.make;
 
 import itmo.java.IO.Printor;
 import itmo.java.IO.Scannie;
+import itmo.java.data.Color;
 import itmo.java.data.Movie;
 import itmo.java.data.MovieGenre;
 import itmo.java.data.MpaaRating;
@@ -41,6 +42,7 @@ public class MakeMovie {
                 movie.setMpaaRating(MpaaRating.valueOf(rating.trim().toUpperCase(Locale.ROOT)));
             } catch (Exception e) {
                 printor.println("Что-то не так" + e.getMessage());
+                printor.println("Рейтинг должен соответствовать одному из значений списка: " + Arrays.toString(MpaaRating.values()));
                 makeMpaaRating(scannie, printor);
             }
         } else {
@@ -57,6 +59,7 @@ public class MakeMovie {
                 movie.setGenre(MovieGenre.valueOf(genre.trim().toUpperCase(Locale.ROOT)));
             } catch (Exception e) {
                 printor.println("Что-то не так" + e.getMessage());
+                printor.println("Жанр должен соответствовать одному из значений списка: " + Arrays.toString(MovieGenre.values()));
                 makeMovieGenre(scannie, printor);
             }
         } else {
@@ -73,6 +76,7 @@ public class MakeMovie {
                 movie.setLength(Integer.parseInt(length));
             } catch (Exception e) {
                 printor.println("Что-то не так" + e.getMessage());
+                printor.println("Продолжительность фильма должна быть целым числом (0;2147483647]");
                 makeLength(scannie, printor);
             }
 
@@ -90,6 +94,7 @@ public class MakeMovie {
                 movie.setOscarsCount(Long.parseLong(oscarcount));
             } catch (Exception e) {
                 printor.println("Что-то не так" + e.getMessage());
+                printor.println("Количество оскаров должно быть целым числом (0;9223372036854775807]");
                 makeOscarCount(scannie, printor);
             }
         } else {

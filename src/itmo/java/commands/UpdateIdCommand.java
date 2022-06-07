@@ -21,14 +21,18 @@ public class UpdateIdCommand implements Command {
 
     @Override
     public void execute() throws Exception {
-        try {
-            collection.removeIf(movie -> movie.getId() == id);
-            movie.setId(id);
-            collection.add(movie);
-            printor.println("The element with id " + id + "was updated");
-        } catch (NullPointerException e) {
-            printor.println("нет такого");
-        }
+        if (collection.isEmpty()) {
+            printor.println("Коллекция пустая, добавьте элемент");
+        } else {
+            try {
+                collection.removeIf(movie -> movie.getId() == id);
+                movie.setId(id);
+                collection.add(movie);
+                printor.println("The element with id " + id + "was updated");
+            } catch (NullPointerException e) {
+                printor.println("нет такого");
+            }
 
+        }
     }
 }

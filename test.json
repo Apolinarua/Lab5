@@ -1,23 +1,4 @@
 {
-  "movies" : [ {
-    "id" : 3413545007370855099,
-    "name" : "1",
-    "coordinates" : {
-      "x" : 1.0,
-      "y" : 1
-    },
-    "creationDate" : 1654158139.015000000,
-    "oscarsCount" : 2,
-    "length" : 3,
-    "genre" : "ACTION",
-    "mpaaRating" : "G",
-    "director" : {
-      "name" : "adf",
-      "birthday" : 1196673330.000000000,
-      "height" : 12.0,
-      "passportID" : "1",
-      "eyeColor" : "BLACK"
-    }
-  } ],
-  "creationTime" : 1654158133.900000000
+  "movies" : [ ],
+  "creationTime" : 1654601341.336000000
 }
